@@ -1,6 +1,6 @@
 # KURS Python Grundlagen
 
-Python Grundkurs vom 19.06.2023 bis 21.06.2023. Trainer: Lukas Kern (LukasK@ppedv.de)
+Python Grundkurs vom 11.09.2023 bis 18.09.2023 (Teilzeit). Trainer: Lukas Kern (LukasK@ppedv.de)
 
 ## M01 | Grundlagen
 
