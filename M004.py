@@ -143,7 +143,7 @@ for zeile in csv:
 # 1
 # 2
 # Fizz
-#  4
+# 4
 # Buzz
 # ...
 # 14
@@ -155,6 +155,28 @@ for zeile in csv:
 # Zahl + Endung 'st', 'nd', 'rd' oder 'th'
 # 1st, 2nd, 3rd, 4th, ..., 21st, 22nd, 23rd, 24th
 # Bonus: Berücksichtige alle Zahlen die mit 11, 12 oder 13 enden
+for i in range(1, 201):
+	if i % 100 in [11, 12, 13]:  # i % 100 == 11 or i % 100 == 12 or i % 100 == 13
+		print(f"{i}th")
+	elif i % 10 == 1:
+		print(f"{i}st")
+	elif i % 10 == 2:
+		print(f"{i}nd")
+	elif i % 10 == 3:
+		print(f"{i}rd")
+	else:
+		print(f"{i}th")
+
+for i in range(1, 201):
+	endung = str(i)[-1]
+	if endung == "1":
+		print(f"{i}st")
+	elif endung == "2":
+		print(f"{i}nd")
+	elif endung == "3":
+		print(f"{i}rd")
+	else:
+		print(f"{i}th")
 
 # Übung 3:
 # Stoppuhr
