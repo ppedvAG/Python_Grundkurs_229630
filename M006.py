@@ -134,7 +134,8 @@ def printTeilnehmer(**teilnehmer: str):
 printTeilnehmer(T1="Lukas", T2="Michelle", T3="Anika")
 
 # Unpacking
-# Mit * und ** können Listen oder Dictionaries in ihre Einzelteile zerlegt werden für die entsprechenden Parameter (*args, **kwargs)s
+# Mit * und ** können Listen oder Dictionaries in ihre Einzelteile zerlegt werden für die entsprechenden Parameter (*args, **kwargs)
+# Damit können *args und **kwargs mit einer Liste oder einem Dictionary befüllt werden
 zahlenListe = [1, 2, 3, 4, 5, 6]
 summe(*zahlenListe)
 
