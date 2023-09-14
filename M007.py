@@ -59,3 +59,17 @@ if os.path.exists("Test.txt"):
 # Erstellt einen Ordner
 import os
 os.mkdir("Ordner")
+
+# Übung 1:
+# Funktion die dem User die Möglichkeiten (w, r, a) gibt
+# User soll eine davon auswählen über input()
+# Wenn der User keine valide Möglichkeit eingibt, soll die Eingabe wiederholt werden
+# Danach soll ein File geöffnet werden und eine Erfolgsmeldung in das File geschrieben werden
+
+# Übung 2:
+# Erstelle ein Programm, das zwei Integer oder Floats abfragt
+# Gib dem Nutzer die Möglichkeit per Tastendruck zwischen Addition, Subtraktion, Multiplikation und Division zu wählen.
+# -> Zahl zwischen 1 und 4 -> Rechenoperation auswählen
+# Bei Ungültiger Eingabe soll der Benutzer erneut nach seiner Entscheidung gefragt werden.
+# Lasse das Ergebnis inklusive der Rechnung in der Konsole ausgeben
+# Frage nach Ende der Operation ob der Benutzer eine neue Rechnung (Wiederholen) durchführen will
