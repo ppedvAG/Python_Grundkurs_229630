@@ -154,6 +154,34 @@ printTeilnehmer(**teilnehmer)
 # Übung 2:
 # Wir wollen eine Funktion erstellen, die einen String als Parameter erhält
 # Die Funktion soll dann in der Konsole ausgeben, aus wie vielen Klein- und Großbuchstaben der String besteht
-# Die Funktion soll zusätzlich zählen wie viele Sonderzeichen (Nummern inkludiert) enthalten sind und das
-# ebenfalls ausgeben
+# Die Funktion soll zusätzlich zählen wie viele Sonderzeichen (Nummern inkludiert) enthalten sind und das ebenfalls ausgeben
 # Sonderzeichen: 4 | Groß: 3 | Klein: 12
+
+# Übung 3
+# Schreibe eine Funktion, die eine Liste von Strings als Parameter empfängt
+# Diese Funktion soll die Strings als eine Aufzählung zusammenbauen und am Ende zurück geben
+# Beispiele:
+# Parameter: []
+# Keine Parameter angegeben
+# Parameter: ["Teilnehmer"]
+# Teilnehmer
+# Parameter: ["Teilnehmer1", "Teilnehmer2"]
+# Teilnehmer1 und Teilnehmer2
+# Parameter: ["Teilnehmer1", "Teilnehmer2", "Teilnehmer3", "Teilnehmer4"]
+# Teilnehmer1, Teilnehmer2, Teilnehmer3 und Teilnehmer4
+def verbindeStrings(*teilnehmer: str):
+	if len(teilnehmer) == 0:
+		return "Keine Teilnehmer angegeben"  # Hier restlichen Code nicht ausführen (wegen return)
+
+	gesamt = ""
+	for tn in range(len(teilnehmer)):
+		gesamt += teilnehmer[tn]
+		if tn >= len(teilnehmer) - 2:  # -2 weil die len 4 zurück gibt statt 3
+			gesamt += " und "
+		else:
+			gesamt += ", "
+	gesamt = gesamt.rstrip(" und ")
+	return gesamt
+
+
+print(verbindeStrings())
