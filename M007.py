@@ -64,7 +64,8 @@ os.mkdir("Ordner")
 # Funktion die dem User die Möglichkeiten (w, r, a) gibt
 # User soll eine davon auswählen über input()
 # Wenn der User keine valide Möglichkeit eingibt, soll die Eingabe wiederholt werden
-# Danach soll ein File geöffnet werden und eine Erfolgsmeldung in das File geschrieben werden
+# Bei w oder a soll ein File geöffnet werden und eine Erfolgsmeldung in das File geschrieben werden
+# Bei r soll das File ausgelesen werden und der Inhalt in die Konsole geschrieben werden
 
 # Übung 2:
 # Erstelle ein Programm, das zwei Integer oder Floats abfragt
