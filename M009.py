@@ -83,7 +83,7 @@ class Kurs:
 person1 = Person("", "", 25)
 person2 = Person("", "", 23)
 person3 = Person("", "", -1)
-kurs = Kurs("Python Grundkurs", 6, person1, person2, person3)  # Verschachtelte Objekte Kurs[Titel, Tage, Personen[person1, person2, person3]]
+kurs = Kurs("Python Grundkurs", 6, person1, person2, person3)  # Verschachtelte Objekte Kurs[Titel, Tage, Personen[person1[...], person2[...], person3[...]]]
 kurs.listTeilnehmer()
 
 # Übung 1:
