@@ -1,12 +1,10 @@
-import pyodbc as sql
+# import pyodbc as sql
+import sqlite3 as sql
 
 class DBConnector:
 	def __init__(self):
 		try:
-			self.connection = sql.connect("Driver={SQL Server Native Client 11.0};"
-			                         "Server=WIN10-LK3;"
-			                         "Database=PythonKurs;"
-			                         "Trusted_Connection=yes;")  # Verbindung zur Datenbank herstellen über Connection String
+			self.connection = sql.connect("Test.db")  # Verbindung zur Datenbank herstellen über Connection String
 			self.cursor = self.connection.cursor()
 
 		except sql.InterfaceError:
@@ -15,11 +13,11 @@ class DBConnector:
 
 	def executeStatement(self, sql):
 		self.cursor.execute(sql)
-		self.cursor.commit()
+		self.connection.commit()
 
 
 connector = DBConnector()
-connector.executeStatement("DROP TABLE Personen")
+# connector.executeStatement("DROP TABLE Personen")
 connector.executeStatement("CREATE TABLE Personen (id int primary key, vorname varchar(30), nachname varchar(30))")
 connector.executeStatement("INSERT INTO Personen VALUES(0, '', '')")
 connector.executeStatement("INSERT INTO Personen VALUES(1, '', '')")
