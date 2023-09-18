@@ -27,15 +27,18 @@ class DBConnector:
 		# TSQL
 		# self.cursor.commit()
 
+	def select(self, sql):
+		return self.cursor.execute(sql).fetchall()
 
-connector = DBConnector()
+
+# connector = DBConnector()
 # connector.executeStatement("DROP TABLE Personen")
-connector.executeStatement("CREATE TABLE Personen (id int primary key, vorname varchar(30), nachname varchar(30))")
-connector.executeStatement("INSERT INTO Personen VALUES(0, '', '')")
-connector.executeStatement("INSERT INTO Personen VALUES(1, '', '')")
-connector.executeStatement("INSERT INTO Personen VALUES(2, '', '')")
-
-# Web Request
-import requests
-response = requests.get("https://open.er-api.com/v6/latest/USD")
-print(response.text)
+# connector.executeStatement("CREATE TABLE Personen (id int primary key, vorname varchar(30), nachname varchar(30))")
+# connector.executeStatement("INSERT INTO Personen VALUES(0, '', '')")
+# connector.executeStatement("INSERT INTO Personen VALUES(1, '', '')")
+# connector.executeStatement("INSERT INTO Personen VALUES(2, '', '')")
+#
+# # Web Request
+# import requests
+# response = requests.get("https://open.er-api.com/v6/latest/USD")
+# print(response.text)

@@ -1,5 +1,5 @@
 Übung 1:
-Schreibe den Taschenrechner so um, das der User immer wieder aufgefordert wird, eine neue Zahl einzugeben falls er keine Zahl eingegeben hat
+Schreibe den Taschenrechner so um, das der User immer wieder aufgefordert wird, eine neue Zahl einzugeben falls er keine Zahl eingegeben hat (mittels try-except)
 Dieses Verhalten soll in eine Funktion abgelegt werden
 Der Taschenrechner soll in einer eigenen Klasse abgelegt werden
 Diese Klasse soll in einem eigenen Skript sein
@@ -11,7 +11,13 @@ Das Programm soll beim Start auch die Tabelle Users mit der Spalte name erstelle
 Ermögliche dem User folgende Funktionen:
     - Er soll neue Benutzer erstellen können (Er soll den Benutzernamen angeben und dieser soll dann in die Tabelle eingefügt werden)
     - Er soll nach Benutzern suchen können (Die Funktion soll als Parameter den Namen des Useres akzeptieren und das Programm soll alle Ergebnisse in die Konsole ausgeben)
+        - cursor.execute(...).fetchall(), cursor.execute(...).fetchmany(Anzahl), cursor.execute(...).fetchone()
     - Er soll die Möglichkeit haben Benutzer zu löschen (Er soll den Benutzernamen angeben der gelöscht werden soll)
 
 Übung 3:
 Lies aus dem Ordner Personen alle Personendateien ein und schreibe diese in eine Datenbank.
+- DBConnector
+- Tabelle erstellen
+- Dateien lesen
+- Dateien auslesen
+- Inhalte in die Datenbank schreiben
