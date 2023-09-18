@@ -4,7 +4,15 @@ import sqlite3 as sql
 class DBConnector:
 	def __init__(self):
 		try:
+			# sqlite3
 			self.connection = sql.connect("Test.db")  # Verbindung zur Datenbank herstellen über Connection String
+
+			# TSQL
+			# self.connection = sql.connect("Driver={SQL Server Native Client 11.0};"
+			# 	                          "Server=WIN10-LK3;"
+			# 	                          "Database=PythonKurs;"
+			# 	                          "Trusted_Connection=yes;")
+
 			self.cursor = self.connection.cursor()
 
 		except sql.InterfaceError:
@@ -13,7 +21,11 @@ class DBConnector:
 
 	def executeStatement(self, sql):
 		self.cursor.execute(sql)
+		# sqlite3
 		self.connection.commit()
+
+		# TSQL
+		# self.cursor.commit()
 
 
 connector = DBConnector()
